@@ -1,0 +1,61 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <Hero />
+        <Menu />
+      </div>
+    );
+  }
+}
+
+class Header extends React.Component {
+  render() {
+    return (
+      <header>
+        <img src="https://www.starbucks.com/content/dam/brand/global/images/logo/header-logo-white.png" />
+        <nav>
+          <a href="/">Inicio</a>
+          <a href="/menu">Menú</a>
+          <a href="/cafe">Café</a>
+        </nav>
+      </header>
+    );
+  }
+}
+
+class Hero extends React.Component {
+  render() {
+    return (
+      <section id="hero">
+        <img src="https://www.starbucks.com/content/dam/brand/global/images/hero/hero-coffee-beans.jpg" />
+        <h1>Starbucks</h1>
+        <p>Café de especialidad de alta calidad</p>
+      </section>
+    );
+  }
+}
+
+class Menu extends React.Component {
+  render() {
+    return (
+      <section id="menu">
+        <h2>Menú</h2>
+        <ul>
+          <li>Café</li>
+          <li>Tés</li>
+          <li>Desayunos</li>
+          <li>Almuerzos</li>
+          <li>Meriendas</li>
+          <li>Postres</li>
+        </ul>
+      </section>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
