@@ -1,0 +1,57 @@
+class Admin extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+    };
+  }
+
+  componentDidMount() {
+    // Obtener la lista de productos desde el servidor
+    this.getProducts();
+  }
+
+  getProducts() {
+    // Realizar una solicitud HTTP al servidor
+    // para obtener la lista de productos
+  }
+
+  addProduct() {
+    // Abrir un modal para agregar un nuevo producto
+  }
+
+  editProduct() {
+    // Abrir un modal para editar un producto existente
+  }
+
+  deleteProduct() {
+    // Eliminar un producto
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Administración de productos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.products.map((product) => (
+              <tr key={product.id}>
+                <td>{product.name}</td>
+                <td>{product.description}</td>
+                <td>{product.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <button onClick={this.addProduct}>Agregar producto</button>
+      </div>
+    );
+  }
+}
